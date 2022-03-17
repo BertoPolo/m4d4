@@ -4,7 +4,7 @@ import SingleComment from "./SingleComment"
 const CommentList = ({ comment }) => {
   return (
     <>
-      <ListGroup>
+      <ListGroup className="text-dark">
         {comment.map((element, index) => {
           return <SingleComment key={index} comment={element.comment} />
         })}
