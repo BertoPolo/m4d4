@@ -1,4 +1,4 @@
-const AddComment = (comment) => {
+const AddComment = () => {
   return <input type="text" />
 }
 
