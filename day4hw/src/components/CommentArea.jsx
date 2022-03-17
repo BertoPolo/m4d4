@@ -1,6 +1,6 @@
 import { Component } from "react"
 import CommentList from "./CommentList"
-// import AddComment from "./AddComment"
+import AddComment from "./AddComment"
 
 class CommentArea extends Component {
   state = {
@@ -36,7 +36,7 @@ class CommentArea extends Component {
   render() {
     return (
       <>
-        {/* <AddComment /> */}
+        <AddComment />
         <CommentList comment={this.state.comments} />
       </>
     )
