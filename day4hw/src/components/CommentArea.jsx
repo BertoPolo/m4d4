@@ -4,7 +4,7 @@ import CommentList from "./CommentList"
 
 class CommentArea extends Component {
   state = {
-    comment: [],
+    comments: [],
   }
   componentDidMount = () => {
     this.getComments()
@@ -23,8 +23,9 @@ class CommentArea extends Component {
       )
       if (response.ok) {
         let data = await response.json()
-        console.log(data)
-        // setstate
+        this.setState({
+          comments: data,
+        })
       } else {
         console.log("tronco, esto esta roto")
       }
@@ -35,9 +36,8 @@ class CommentArea extends Component {
   render() {
     return (
       <>
-        <CommentList comment={this.state.comment} />
-        {/* comment={this. FETCHED COMMENT} */}
         {/* <AddComment /> */}
+        <CommentList comment={this.state.comments} />
       </>
     )
   }

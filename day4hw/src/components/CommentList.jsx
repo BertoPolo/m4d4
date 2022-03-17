@@ -1,9 +1,15 @@
+import { ListGroup } from "react-bootstrap"
+import SingleComment from "./SingleComment"
+
 const CommentList = (comment) => {
   return (
-    <li>
-      <p>{comment}</p>
-      {/* here map a sigleComment ( component ) */}
-    </li>
+    <>
+      <ListGroup>
+        {comment.map((element) => {
+          return <SingleComment comment={element} />
+        })}
+      </ListGroup>
+    </>
   )
 }
 
